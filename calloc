@@ -1,0 +1,52 @@
+
+//动态内存分配
+
+int main()
+//{
+//	//malloc(10*,malloc(int));//不初始化
+//	int *p = (int *)calloc(10,sizeof(int));//calloc自动初始化为0
+//	if(p == NULL)
+//	{
+//		printf("%s\n",strerror(errno));
+//	}
+//	else
+//	{
+//		int i = 0;
+//		for(i = 0;i<10;i++)
+//		{
+//			printf("%d",*(p+i));
+//		}
+//	}
+//	free(p);//释放动态开辟的空间
+//	p = NULL;//为了安全
+//	return 0;
+//}
+
+//realloc
+int main()
+{
+	int *p = (int *)malloc(20);
+	if(p == NULL)
+	{
+		printf("%s\n",strerror(errno));
+	}
+	else
+	{
+		int i = 0;
+		for(i = 0;i<5;i++)
+		{
+			*(p + i) = i;
+		}
+	}
+	//就是在使用malloc开辟的20个字节的空间
+	//假设这里20个空间不够
+	//希望有40个字节的空间，可以使用realoc再开辟20个空间
+	int* ptr = (int*)realloc(p,40);
+	if(ptr != NULL)
+	{
+		p = ptr;
+	}
+	free(p);
+	p = NULL;
+	return 0;
+}
