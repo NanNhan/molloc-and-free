@@ -1,0 +1,61 @@
+//relloc实现malloc的功能
+int main()
+{
+	int *p = (int*)malloc(40);
+	if(p = NULL)
+	{
+		return 0;
+	}
+	
+		
+	return 0;
+}
+
+////1.对空指针进行解应用操作
+//int main()
+//{
+//	//1.对空指针进行解应用操作
+//	//万一malloc失败，p就被赋值NULL
+//	int *p = (int*)malloc(40);
+//	int i = 0;
+//	for(i = 0;i<10;i++)
+//	{
+//		*(p + i) = i;
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+//
+////2.对动态开辟的内存的越界访问
+//int main()
+//{
+//	int *p = (int*)malloc(5* sizeof(int));
+//	if(p = NULL)
+//	{
+//		return 0;
+//	}
+//	else
+//	{
+//		int i = 0;
+//		for(i = 0;i<10;i++)//越界访问，只有5个整型元素
+//		{
+//			*(p + i) = i;
+//		}
+//	}
+//
+//	return 0;
+//
+//}
+////对非动态开辟的free释放
+//int main()
+//{
+//	int a = 10;
+//	int* p = &a;
+//	*p = 20;
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+
+//4.
