@@ -1,0 +1,40 @@
+//4.使用free释放动态开辟内存的一部分
+//int main()
+//{
+//	int* p = (int*)malloc(40);
+//	if(p == NULL)
+//	{
+//		return 0;
+//	}
+//	int i = 0;
+//	for(i = 0;i<10;i++)
+//	{
+//		*p++ = i;
+//	}
+//	free(p);
+//	return 0;
+//}
+//5.对同一块动态内存的多次释放
+//int main()
+//{
+//	int* p = (int*)malloc(40);
+//	if(p == NULL)
+//	{
+//		return 0;
+//	}
+//	//使用同一块内存空间的多次释放
+//	free(p);
+//	p = NULL;
+//	free(p);
+//	return 0;
+//}
+
+//6.对动态开辟空间的忘记释放
+int main()
+{
+	while(1)
+	{
+		malloc(1);
+	}
+	return 0;
+}
