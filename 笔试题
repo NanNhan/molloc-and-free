@@ -37,3 +37,74 @@ int main()
 	Test();
 	return 0;
 }
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+//char* Getmemory(void)
+//{
+//		char p[] = "hello world";
+//		return p;//p将地址传给str，但是出了Getmemory之后p中的内容还给操作系统，str指向的空间就是随机值
+//		//p在栈区开辟了空间，这是返回栈空地址的问题，非法访问内存
+//}
+//void Test(void)
+//{
+//	char *str = NULL;
+//	str = Getmemory();
+//	printf(str);
+//}
+//int main()
+//{
+//	Test();
+//	return 0;
+//}
+
+
+//int* text()
+//{
+//	static int a = 10;//static 使得a的生命周期变长，出了函数值不销毁，静态区
+//	//int a = 10;//栈区
+//	return &a;
+//}
+//int main()
+//{
+//	int* p = text();
+//	*p = 20;
+//	return 0;
+//}
+//int main()
+//{
+//	while(1)
+//	{
+//		int *p = (int*)malloc(0);
+//	}
+//	return 0;
+//}
+//
+//void Test(void)
+//{
+//	char* str = (char*)malloc(100);
+//	strcpy(str,"hello");
+//	free(str);
+//	if(str != NULL)//free释放str指向的空间后，并不会把str置为NULL
+//	{
+//		strcpy(str,"world");
+//		printf(str);
+//	}
+//}
+//int main()
+//{
+//	Test();
+//	return 0;
+//}
+
+int main()
+{
+	int i;
+	do
+	{
+		int i = 0;
+		i++;
+		printf("屯");
+	}while(i = INT_MAX);
+	return 0;
+}
